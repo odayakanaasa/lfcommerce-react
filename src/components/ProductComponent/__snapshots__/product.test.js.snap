@@ -11,7 +11,7 @@ exports[`product component with display a product image, name and price 1`] = `
     className="product-cover"
     style={
       Object {
-        "backgroundImage": "url(\${this.props.productImage})",
+        "backgroundImage": "url(undefined)",
       }
     }
   />
@@ -29,7 +29,6 @@ exports[`product component with display a product image, name and price 1`] = `
       <strong>
         <Link
           replace={false}
-          to="\${this.props.productURL}"
         />
       </strong>
     </Col>
