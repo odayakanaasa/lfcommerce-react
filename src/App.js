@@ -10,7 +10,7 @@ import AdminDashboard from './admin/components/DashboardLayout/Dashboard';
 import AdminProductList from './admin/components/ProductListLayout/ProductList';
 import AdminCustomerList from './admin/components/CustomerListLayout/CustomerList';
 import AdminOrderList from './admin/components/OrderListLayout/OrderList';
-
+import {combineReducers, createStore} from 'redux';
 import {
   BrowserRouter as Router,
   Redirect,

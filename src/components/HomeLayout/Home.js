@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Product from '../ProductComponent/Product';
 import { Grid, Row, Col } from 'react-bootstrap';
-import SampleProducts from '../../samples/SampleProducts';
+import sampleProducts from '../../samples/SampleProducts';
 
 class Home extends Component {
   render() {
@@ -13,7 +13,7 @@ class Home extends Component {
             </div>
             <Grid>
                 <Row className="show-grid">
-                {SampleProducts.map(function(product) {
+                {sampleProducts.map(function(product) {
                     return (<Col key={product.productURL} md={3}>
                                 <Product productName={product.productName}
                                         productURL={product.productURL}
@@ -29,7 +29,7 @@ class Home extends Component {
             </div>
             <Grid>
                 <Row className="show-grid">
-                    {SampleProducts.map(function(product) {
+                    {sampleProducts.map(function(product) {
                         return (<Col key={product.productURL} md={3}>
                                     <Product productName={product.productName}
                                             productURL={product.productURL}

@@ -1,4 +1,4 @@
-const SampleProducts = [
+const sampleProducts = [
     {productName: 'Test Product 1',
      productURL: 'products/test-product-1',
      productImage: 'https://image.spreadshirtmedia.com/image-server/v1/products/1003716746/views/1,width=800,height=800,appearanceId=1,backgroundColor=fff,version=1485256808/i-eat-ass-t-shirt-men-s-t-shirt.jpg',

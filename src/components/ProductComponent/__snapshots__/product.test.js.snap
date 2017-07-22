@@ -11,7 +11,7 @@ exports[`product component with display a product image, name and price 1`] = `
     className="product-cover"
     style={
       Object {
-        "backgroundImage": "url(undefined)",
+        "backgroundImage": "url(http://assets.teenvogue.com/photos/57dfbfe5046b3a2e2a7364bd/master/pass/Kylie-Armytee.jpg)",
       }
     }
   />
@@ -29,7 +29,10 @@ exports[`product component with display a product image, name and price 1`] = `
       <strong>
         <Link
           replace={false}
-        />
+          to="products/test-product-1"
+        >
+          Test product
+        </Link>
       </strong>
     </Col>
     <Col
@@ -38,7 +41,9 @@ exports[`product component with display a product image, name and price 1`] = `
       componentClass="div"
       md={4}
       xs={4}
-    />
+    >
+      $12.90
+    </Col>
   </Row>
 </Panel>
 `;
