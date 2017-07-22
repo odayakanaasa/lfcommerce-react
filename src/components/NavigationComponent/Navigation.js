@@ -92,7 +92,7 @@ class Navigation extends Component {
                             <Navbar.Header>
                                 <Navbar.Brand>
                             <Link to="/"><i className="fa fa-smile-o" aria-hidden="true"></i>&nbsp;
-                            LittleFactor</Link>
+                            LF Commerce</Link>
                                 </Navbar.Brand>
                             </Navbar.Header>
                         </Col>

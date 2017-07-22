@@ -8,13 +8,11 @@ import {
 class Product extends Component {
   constructor(props){
     super(props);
-    console.log(props);
-
   }
   render() {
     return (
       <Panel className="no-border product-item">
-          <div className="product-cover" style={{backgroundImage:'url(${this.props.productImage})'}}></div>
+          <div className="product-cover" style={{backgroundImage:`url(${this.props.productImage})`}}></div>
           <br />
           <Row>
               <Col md={8} xs={8}>
