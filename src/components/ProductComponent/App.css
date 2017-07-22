@@ -1,0 +1,19 @@
+.no-border{
+  border: 0 !important;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.panel-body{
+    padding: 0;
+}
+.product-item{
+    margin-bottom: 50px;
+}
+.product-cover{
+    height: 260px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

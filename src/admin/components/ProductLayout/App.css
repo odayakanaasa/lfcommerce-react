@@ -1,0 +1,10 @@
+.footer{
+    color:#fff;
+    padding-top: 100px;
+    background-color: #303238;
+    height: 260px;
+}
+.footer a, .focus a:hover, .focus a:active, .focus a:link{
+    color:#fff;
+    text-decoration: none;
+}

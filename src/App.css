@@ -1,0 +1,7 @@
+.badge-danger{
+    background-color:#D9534F;
+}
+a, a:hover, a:link, a:active, a:visited{
+    text-decoration: none;
+    color:#000;
+}
