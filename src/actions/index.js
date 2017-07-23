@@ -1,6 +1,6 @@
-import * as cart from '../../constants/Cart';
+import * as cart from './constants/Cart';
 
-export function addProduct(){
+export function addProduct(product){
   return {type:cart.ADD_PRODUCT};
 }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow, mount, render} from 'enzyme';
 import toJSON from 'enzyme-to-json';
-import Product from './Product';
+import Product from '../components/Product';
 
 test('product component with display a product image, name and price', () => {
   const product = shallow(<Product productName="Test product"

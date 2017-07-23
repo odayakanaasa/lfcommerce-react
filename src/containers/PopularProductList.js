@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import '../App.css';
+import {addProduct} from '../actions';
+import {bindActionCreators} from 'redux';
 import Product from '../components/Product';
 import { Grid, Row, Col } from 'react-bootstrap';
+import '../App.css';
 
 class PopularProductList extends Component {
   render() {
@@ -13,12 +15,14 @@ class PopularProductList extends Component {
             </div>
             <Grid>
                 <Row className="show-grid">
-                {this.props.popularProducts.map(function(product) {
-                    return (<Col key={product.productURL} md={3}>
-                                <Product productName={product.productName}
-                                        productURL={product.productURL}
-                                        productImage={product.productImage}
-                                        productPrice={product.productPrice} />
+                {this.props.popularProducts.map((product) => {
+                    return (<Col onClick={()=>this.props.addProduct(product)}
+                                 key={product.productURL} md={3}>
+                                <Product 
+                                    productName={product.productName}
+                                    productURL={product.productURL}
+                                    productImage={product.productImage}
+                                    productPrice={product.productPrice}/>
                             </Col>)
                     })
                 }
@@ -35,4 +39,8 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps)(PopularProductList);
+function mapDispatchToProps(dispatch){
+    return bindActionCreators({addProduct}, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(PopularProductList);

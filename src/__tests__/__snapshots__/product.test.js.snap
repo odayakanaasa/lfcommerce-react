@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`product component with display a product image, name and price 1`] = `
+<Panel
+  bsClass="panel"
+  bsStyle="default"
+  className="no-border product-item"
+  defaultExpanded={false}
+>
+  <div
+    className="product-cover"
+    style={
+      Object {
+        "backgroundImage": "url(http://assets.teenvogue.com/photos/57dfbfe5046b3a2e2a7364bd/master/pass/Kylie-Armytee.jpg)",
+      }
+    }
+  />
+  <br />
+  <Row
+    bsClass="row"
+    componentClass="div"
+  >
+    <Col
+      bsClass="col"
+      componentClass="div"
+      md={8}
+      xs={8}
+    >
+      <strong>
+        <Link
+          replace={false}
+          to="products/test-product-1"
+        >
+          Test product
+        </Link>
+      </strong>
+    </Col>
+    <Col
+      bsClass="col"
+      className="text-right"
+      componentClass="div"
+      md={4}
+      xs={4}
+    >
+      $12.90
+    </Col>
+  </Row>
+</Panel>
+`;
