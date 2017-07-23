@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {combineReducers, createStore} from 'redux';
+import { connect } from 'react-redux'
 import './App.css';
 import Home from './components/HomeLayout/Home';
 import ProductDetail from './components/ProductLayout/ProductDetail';
@@ -10,13 +12,7 @@ import AdminDashboard from './admin/components/DashboardLayout/Dashboard';
 import AdminProductList from './admin/components/ProductListLayout/ProductList';
 import AdminCustomerList from './admin/components/CustomerListLayout/CustomerList';
 import AdminOrderList from './admin/components/OrderListLayout/OrderList';
-import {combineReducers, createStore} from 'redux';
-import {
-  BrowserRouter as Router,
-  Redirect,
-  Route,
-  Link
-} from 'react-router-dom'
+import {BrowserRouter as Router, Redirect, Route, Link } from 'react-router-dom'
 
 class App extends Component {
   render() {

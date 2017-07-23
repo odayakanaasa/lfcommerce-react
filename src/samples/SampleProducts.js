@@ -25,4 +25,4 @@ const sampleProducts = [
      productPrice: '$12.90'},
 ]
 
-export default SampleProducts;
+export default sampleProducts;
