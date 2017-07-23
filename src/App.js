@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import {combineReducers, createStore} from 'redux';
 import { connect } from 'react-redux'
 import './App.css';
-import Home from './components/HomeLayout/Home';
-import ProductDetail from './components/ProductLayout/ProductDetail';
-import Cart from './components/CartComponent/Cart';
-import Navigation from './components/NavigationComponent/Navigation';
-import Footer from './components/FooterComponent/Footer';
-import ProductList from './components/ProductListLayout/ProductList';
-import AdminDashboard from './admin/components/DashboardLayout/Dashboard';
-import AdminProductList from './admin/components/ProductListLayout/ProductList';
-import AdminCustomerList from './admin/components/CustomerListLayout/CustomerList';
-import AdminOrderList from './admin/components/OrderListLayout/OrderList';
+import Home from './components/Home';
+import ProductDetail from './components/ProductDetail';
+import Cart from './components/Cart';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+import ProductList from './containers/PopularProductList';
+import AdminDashboard from './components/admin/Dashboard';
+import AdminProductList from './components/admin/ProductList';
+import AdminCustomerList from './components/admin/CustomerList';
+import AdminOrderList from './components/admin/OrderList';
 import {BrowserRouter as Router, Redirect, Route, Link } from 'react-router-dom'
 
 class App extends Component {
