@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {combineReducers, createStore} from 'redux';
 import { connect } from 'react-redux'
 import Home from './components/Home';
-import ProductDetail from './components/ProductDetail';
+import ProductDetail from './containers/ProductDetail';
 import Cart from './components/Cart';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';

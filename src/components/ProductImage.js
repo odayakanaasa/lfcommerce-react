@@ -3,7 +3,7 @@ import '../App.css';
 import Product from './Product';
 import { Grid, Row, Col, Image } from 'react-bootstrap';
 
-class ProductDetail extends Component {
+class ProductImage extends Component {
   constructor(props){
     super(props);
   }
@@ -25,4 +25,4 @@ class ProductDetail extends Component {
   }
 }
 
-export default ProductDetail;
+export default ProductImage;

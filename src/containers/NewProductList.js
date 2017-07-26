@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import '../App.css';
 import Product from '../components/Product';
 import { Grid, Row, Col } from 'react-bootstrap';
+import '../App.css';
 
 class NewProductList extends Component {
   render() {

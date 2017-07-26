@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import '../App.css';
-import ProductImage from './ProductImage';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import ProductImage from '../components/ProductImage';
 import { Grid, Row, Col, Button, FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
+import '../App.css';
 
 class ProductDetail extends Component {
   render() {
@@ -9,15 +11,14 @@ class ProductDetail extends Component {
         <Grid style={{marginTop: '30px', marginBottom:'30px'}}>
             <Row>
               <Col md={9}>
-                <ProductImage />
+                <ProductImage 
+                  mainImage={this.props.productDetail.productImage}
+                  thumbnails={this.props.productDetail.productThumbnails} />
               </Col>
               <Col md={3}>
-                <h3>yes i'm fine</h3>
-                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-                  nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-                  mollit anim id est laborum.</div><br />
+                <h3>{this.props.productDetail.productName}</h3>
+                <h3 style={{color:'#f2263b'}}>{this.props.productDetail.productPrice}</h3>
+                <div>{this.props.productDetail.productDescription}</div><br />
                 <FormGroup controlId="formControlsSelect">
                   <ControlLabel>Size</ControlLabel>
                   <FormControl componentClass="select" placeholder="Please select size">
@@ -51,4 +52,10 @@ class ProductDetail extends Component {
   }
 }
 
-export default ProductDetail;
+function mapStateToProps(state){
+    return{
+        productDetail: state.productDetail,
+    }
+}
+
+export default connect(mapStateToProps)(ProductDetail);
