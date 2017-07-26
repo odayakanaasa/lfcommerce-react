@@ -14,15 +14,13 @@ class Footer extends Component {
                         <a href="/shipping">Shipping</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href="/return-policy">Return Policy</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href="/terms">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="/help">Help</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <i className="fa fa-facebook" aria-hidden="true"></i>&nbsp;
-                        <a href="https://www.facebook.com/LittleFactor/">Facebook</a>
+                        <a href="/help">Help</a>
                     </Col>
                     <Col md={3} />
                 </Row><br /><br />
                 <Row>
                     <Col md={12} className="text-center">
-                        <small style={{color: '#eee'}}>&copy; LittleFactor</small>
+                        <small style={{color: '#eee'}}>&copy; LF Commerce</small>
                     </Col>
                 </Row>
             </Grid>

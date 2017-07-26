@@ -3,14 +3,14 @@ import {combineReducers, createStore} from 'redux';
 import { connect } from 'react-redux'
 import Home from './components/Home';
 import ProductDetail from './containers/ProductDetail';
-import Cart from './components/Cart';
-import Navigation from './components/Navigation';
+import Cart from './containers/Cart';
+import Navigation from './containers/Navigation';
 import Footer from './components/Footer';
 import ProductList from './containers/PopularProductList';
-import AdminDashboard from './components/admin/Dashboard';
-import AdminProductList from './components/admin/ProductList';
-import AdminCustomerList from './components/admin/CustomerList';
-import AdminOrderList from './components/admin/OrderList';
+import AdminDashboard from './containers/admin/Dashboard';
+import AdminProductList from './containers/admin/ProductList';
+import AdminCustomerList from './containers/admin/CustomerList';
+import AdminOrderList from './containers/admin/OrderList';
 import {BrowserRouter as Router, Redirect, Route, Link } from 'react-router-dom'
 import './App.css';
 

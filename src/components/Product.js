@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import { Panel, Grid, Row, Col } from 'react-bootstrap';
-import {
-  Link
-} from 'react-router-dom';
+
 
 class Product extends Component {
   constructor(props){
@@ -16,7 +14,7 @@ class Product extends Component {
           <br />
           <Row>
               <Col md={8} xs={8}>
-                <strong><Link to={this.props.productURL}>{this.props.productName}</Link></strong>
+                <strong><a href={this.props.productURL}>{this.props.productName}</a></strong>
               </Col>
               <Col md={4} xs={4} className="text-right">
               {this.props.productPrice}
