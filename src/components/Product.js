@@ -10,14 +10,16 @@ class Product extends Component {
   render() {
     return (
       <Panel className="no-border product-item">
-          <div className="product-cover" style={{backgroundImage:`url(${this.props.productImage})`}}></div>
+          <a href={this.props.productURL}>
+            <div className="product-cover" style={{backgroundImage:`url(${this.props.productImage})`}}></div>
+          </a>
           <br />
-          <Row>
+          <Row className="product-item-footer">
               <Col md={8} xs={8}>
-                <strong><a href={this.props.productURL}>{this.props.productName}</a></strong>
+                <a href={this.props.productURL}>{this.props.productName}</a>
               </Col>
               <Col md={4} xs={4} className="text-right">
-              {this.props.productPrice}
+                <strong>{this.props.productPrice}</strong>
               </Col>
           </Row>
       </Panel>

@@ -4,13 +4,18 @@
 .badge-danger{
     background-color:#D9534F;
 }
+.quantity-input{
+    width: 60px;
+    display:inline-block;
+}
 a, a:hover, a:link, a:active, a:visited{
     text-decoration: none;
     color:#000;
 }
 /* navbar */
 .navbar-default {
-    background-color: #F2F2F6;
+    background-color: #fff;
+    margin-bottom: 0;
 }
 
 /* Link */
@@ -76,12 +81,13 @@ a, a:hover, a:link, a:active, a:visited{
 .sub-nav{
     border: 0;
     background-color:#fff !important;
-    font-size: 1.5em;
+    font-size: 1.2em;
+    padding: 20px 0;
 }
 /* Title */
 .sub-nav .navbar-brand {
     color: #333;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 .sub-nav .navbar-brand:hover,
 .sub-nav .navbar-brand:focus {
@@ -127,13 +133,21 @@ a, a:hover, a:link, a:active, a:visited{
 .product-item{
     margin-bottom: 50px;
 }
+.product-item-footer{
+    padding:20px 10px;
+}
 .product-cover{
-    height: 260px;
+    height: 280px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-
+.bg-white{
+    background-color: #fff;
+}
+.padding-bottom-20{
+    padding-bottom: 20px;
+}
 @media (max-width: 767px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
         color: #777;

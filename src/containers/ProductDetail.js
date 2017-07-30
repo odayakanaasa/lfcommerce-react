@@ -15,7 +15,7 @@ class ProductDetail extends Component {
                   mainImage={this.props.productDetail.productImage}
                   thumbnails={this.props.productDetail.productThumbnails} />
               </Col>
-              <Col md={3}>
+              <Col md={3} className="bg-white padding-bottom-20">
                 <h3>{this.props.productDetail.productName}</h3>
                 <h3 className="price">{this.props.productDetail.productPrice}</h3>
                 <div>{this.props.productDetail.productDescription}</div><br />

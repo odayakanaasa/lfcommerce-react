@@ -21,7 +21,9 @@ class CartItem extends Component {
         </Col>
         <Col md={2}>
           <FormGroup>
-            <FormControl type="text" placeholder="0" value={this.props.productQuantity} />
+            <span className="glyphicon glyphicon-minus"></span>&nbsp;
+            <FormControl type="number" placeholder="0" value={this.props.productQuantity} className="quantity-input" />&nbsp;
+            <span className="glyphicon glyphicon-plus"></span>
           </FormGroup>
           Delete
         </Col>

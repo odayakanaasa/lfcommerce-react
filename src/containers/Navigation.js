@@ -37,7 +37,7 @@ class Navigation extends Component {
                                     </FormGroup>
                                 </Navbar.Form>
                             </Col>
-                            <Col md={3}>
+                            <Col md={3}>                                
                                 <Nav pullRight>            
                                     <NavDropdown eventKey={3} title="Nicholas Chen" id="basic-nav-dropdown">
                                         <MenuItem eventKey={3.1} href="/account">My Account</MenuItem>
@@ -45,6 +45,11 @@ class Navigation extends Component {
                                         <MenuItem eventKey={3.3}>Log Out</MenuItem>
                                     </NavDropdown>
                                 </Nav>
+                                <Link to="/cart" className="pull-right">
+                                    <span className="navbar-text">                                
+                                        <span className="glyphicon glyphicon-shopping-cart"></span><Badge className="badge-danger">3</Badge>                                
+                                    </span>
+                                </Link>
                             </Col>
                         </Row>
                     </Grid>            
@@ -60,20 +65,13 @@ class Navigation extends Component {
                                     </Navbar.Brand>
                                 </Navbar.Header>
                             </Col>
-                            <Col md={6}>
+                            <Col md={8}>
                                 <Nav>
                                     <NavItem eventKey={1} href="/categories/geeks">GEEKS</NavItem>
                                     <NavItem eventKey={2} href="/categories/funny">FUNNY</NavItem>
                                     <NavItem eventKey={3} href="/categories/kids">KIDS</NavItem>
                                     <NavItem eventKey={4} href="/categories/pets">PETS</NavItem>
                                 </Nav>
-                            </Col>
-                            <Col md={2}>
-                                <Link to="/cart">
-                                    <span className="navbar-text">                                
-                                        <span className="glyphicon glyphicon-shopping-cart"></span><Badge className="badge-danger">3</Badge>                                
-                                    </span>
-                                </Link>
                             </Col>
                         </Row>
                     </Grid>
