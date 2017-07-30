@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import '../App.css';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
 import { ListGroup, ListGroupItem, Grid, Row, Col, Button, Image } from 'react-bootstrap';
-import {
-  Link
-} from 'react-router-dom';
+import CartItem from './CartItem';
+import '../App.css';
 
 class Cart extends Component {
   render() {
@@ -14,34 +14,20 @@ class Cart extends Component {
         </div>
         <Row>
           <Col md={12}>
-          <ListGroup>
-            <ListGroupItem>
-              <Row>
-                <Col md={2}>
-                  <Image src="https://ih1.redbubble.net/image.394321805.2445/ra,kids_tee,x1250,FFFFFF:97ab1c12de,front-pad,940x940,ffffff.jpg" responsive />
-                </Col>
-                <Col md={8}>
-                  <div><strong>The Chicago Dog</strong></div>
-                </Col>
-                <Col md={2}>
-                  Delete
-                </Col>
-              </Row>
-            </ListGroupItem>
-            <ListGroupItem>
-              <Row>
-                <Col md={2}>
-                  <Image src="https://ih0.redbubble.net/image.388613725.8271/tb,1200x1200,small.2.jpg" responsive />
-                </Col>
-                <Col md={8}>
-                  <div><strong>The Chicago Dog</strong></div>
-                </Col>
-                <Col md={2}>
-                  Delete
-                </Col>
-              </Row>
-            </ListGroupItem>
-          </ListGroup>
+            <ListGroup>
+              {
+                this.props.cart.map((cartItem)=>{
+                  return (<ListGroupItem>
+                            <CartItem 
+                              productImage={cartItem.productImage} 
+                              productName={cartItem.productName}
+                              productUrl={cartItem.productUrl}
+                              productPrice={cartItem.productPrice}
+                              productQuantity={cartItem.productQuantity} />
+                          </ListGroupItem>)
+                })
+              }
+            </ListGroup>
           </Col>
         </Row>
         <Button bsStyle="primary" style={{float:'right'}}>Checkout</Button>
@@ -50,4 +36,10 @@ class Cart extends Component {
   }
 }
 
-export default Cart;
+function mapStateToProps(state){
+    return{
+        cart: state.cart,
+    }
+}
+
+export default connect(mapStateToProps)(Cart);

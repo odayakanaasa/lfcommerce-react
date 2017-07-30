@@ -15,12 +15,12 @@ class ProductList extends Component {
     return (
         <Grid style={{marginTop:'30px', marginBottom:'30px'}}>
             <Row className="show-grid">
-                {sampleProducts.map(function(product) {
+                {sampleProducts.map((product)=> {
                     return (<Col key={product.productURL} md={3}>
                                 <Product productName={product.productName}
-                                        productURL={product.productURL}
-                                        productImage={product.productImage}
-                                        productPrice={product.productPrice} />
+                                         productURL={product.productURL}
+                                         productImage={product.productImage}
+                                         productPrice={product.productPrice} />
                             </Col>)
                     })
                 }

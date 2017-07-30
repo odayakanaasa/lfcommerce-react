@@ -13,7 +13,7 @@ class NewProductList extends Component {
             </div>
             <Grid>
                 <Row className="show-grid">
-                {this.props.newProducts.map(function(product) {
+                {this.props.newProducts.map((product) => {
                     return (<Col key={product.productURL} md={3}>
                                 <Product productName={product.productName}
                                         productURL={product.productURL}
