@@ -17,11 +17,11 @@ class Cart extends Component {
             <ListGroup>
               {
                 this.props.cart.map((cartItem)=>{
-                  return (<ListGroupItem>
+                  return (<ListGroupItem key={cartItem.productName}>
                             <CartItem 
                               productImage={cartItem.productImage} 
                               productName={cartItem.productName}
-                              productUrl={cartItem.productUrl}
+                              productURL={cartItem.productURL}
                               productPrice={cartItem.productPrice}
                               productQuantity={cartItem.productQuantity} />
                           </ListGroupItem>)
@@ -30,7 +30,12 @@ class Cart extends Component {
             </ListGroup>
           </Col>
         </Row>
-        <Button bsStyle="primary" style={{float:'right'}}>Checkout</Button>
+        <Row>
+          <Col md={12} className="text-right">
+              <div><strong>Subtotal: <span className="price">$123.16</span></strong></div><br />
+              <Button bsStyle="primary" style={{float:'right'}}>Checkout</Button>
+          </Col>
+        </Row>        
       </Grid>
     );
   }
