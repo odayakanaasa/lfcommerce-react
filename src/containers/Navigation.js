@@ -38,18 +38,18 @@ class Navigation extends Component {
                                 </Navbar.Form>
                             </Col>
                             <Col md={3}>                                
-                                <Nav pullRight>            
+                                <Nav pullRight>   
+                                    <Link to="/cart">
+                                        <span className="navbar-text">                                
+                                            <span className="glyphicon glyphicon-shopping-cart"></span><Badge className="badge-danger">3</Badge>                                
+                                        </span>
+                                    </Link>         
                                     <NavDropdown eventKey={3} title="Nicholas Chen" id="basic-nav-dropdown">
                                         <MenuItem eventKey={3.1} href="/account">My Account</MenuItem>
                                         <MenuItem eventKey={3.2} href="/cart">Cart <Badge className="badge-danger">3</Badge></MenuItem>
                                         <MenuItem eventKey={3.3}>Log Out</MenuItem>
                                     </NavDropdown>
-                                </Nav>
-                                <Link to="/cart" className="pull-right">
-                                    <span className="navbar-text">                                
-                                        <span className="glyphicon glyphicon-shopping-cart"></span><Badge className="badge-danger">3</Badge>                                
-                                    </span>
-                                </Link>
+                                </Nav>                                
                             </Col>
                         </Row>
                     </Grid>            
